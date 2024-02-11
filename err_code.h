@@ -13,6 +13,14 @@ extern "C" {
 #define ERR_CODE_NULL_PTR 	(uint32_t)0xFFFE
 #endif
 
+#ifdef STM32F407xx
+#include "stm32f4xx.h"
+
+#define ERR_CODE_SUCCESS 	HAL_OK
+#define ERR_CODE_FAIL 		HAL_ERROR
+#define ERR_CODE_NULL_PTR 	(uint32_t)0xFFFE
+#endif
+
 typedef uint32_t err_code_t;
 
 #ifdef __cplusplus
