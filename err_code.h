@@ -5,11 +5,13 @@
 extern "C" {
 #endif
 
-#include "stm32f4xx.h"
+#ifdef STM32F103xB
+#include "stm32f1xx.h"
 
 #define ERR_CODE_SUCCESS 	HAL_OK
 #define ERR_CODE_FAIL 		HAL_ERROR
 #define ERR_CODE_NULL_PTR 	(uint32_t)0xFFFE
+#endif
 
 typedef uint32_t err_code_t;
 
